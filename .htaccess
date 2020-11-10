@@ -5,3 +5,6 @@ RewriteRule ^ /%1 [NC,L,R]
 
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+RewriteCond %{HTTP_HOST} ^kevinrinsma.nl$ [OR]
+RewriteRule (.*)$ https://kevinrinsma.com/$1 [R=301,L]
